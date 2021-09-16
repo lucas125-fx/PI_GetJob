@@ -1,17 +1,11 @@
 <?php
 // include_once("MySQL.php");
 
-include_once("./inc/header.php");
+include_once(dirname(__FILE__) . "/inc/header.php");
 
-include_once("./inc/menu.php")
-?>
-<br>
-<br>
-<br>
-<?php
+include_once(dirname(__FILE__) . "/inc/menu.php");
 
-
-include_once(dirname(__FILE__) . "./inc/carrosel.php");
+include_once(dirname(__FILE__) . "/inc/carrosel.php");
 ?>
 
 <br>
@@ -27,10 +21,6 @@ include_once(dirname(__FILE__) . "./inc/carrosel.php");
       <img src="assets/img/house.png">
       <p>Trabalhos na porta de sua casa</p>
       <h5>É simples, basta se cadastrar e fazer login</h5>
-
-
-      
-
     </div>
   </div>
 </div>
@@ -38,5 +28,5 @@ include_once(dirname(__FILE__) . "./inc/carrosel.php");
 
 
 <?php
-include_once(dirname(__FILE__) . "./inc/footer.php");
+include_once(dirname(__FILE__) . "/inc/footer.php");
 ?>

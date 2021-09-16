@@ -1,8 +1,8 @@
 <?php
 
-include_once("./inc/header.php");
-include_once("./inc/menu.php");
-include_once(dirname(__FILE__) . "./inc/MySQL.php");
+include_once(dirname(__FILE__) . "/inc/header.php");
+include_once(dirname(__FILE__) . "/inc/menu.php");
+include_once(dirname(__FILE__) . "/inc/MySQL.php");
 
 
 
@@ -17,7 +17,7 @@ if ($sql->execute()) {
         foreach ($info as $key => $values) {
 
             $nome = $values['nome'];
-           // $estado = $values['estado'];
+            // $estado = $values['estado'];
             $email = $values['email'];
             $nasc = $values['nascimento'];
             // $img = $values['imagem'];
@@ -80,6 +80,6 @@ if ($sql->execute()) {
         </div>
 </div>
 <?php
-include_once(dirname(__FILE__) . "./inc/footer.php");
+include_once(dirname(__FILE__) . "/inc/footer.php");
 ?>
 </main>

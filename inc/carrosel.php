@@ -1,21 +1,23 @@
-<section class="">
-  <div class="row my-5" style="justify-content: center;">
-    <div id="carousel" class="carousel slide h3 " data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="./assets/img/model.jpg" alt="Primeiro Slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="./assets/img/justify.jpg" alt="Segundo Slide">
-        </div>
-        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Próximo</span>
-        </a>
+<div class="container-fluid">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://via.placeholder.com/1440x400" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1440x400" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1440x400" class="d-block w-100" alt="...">
       </div>
     </div>
-</section>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
