@@ -21,11 +21,13 @@ if ($sql->execute()) :
                         $id = "<p style='color: black'>" . $values['ID'] . '</p>';
                         $nome = "<h5 style='color: black'>Nome: " . $values['nome'] . '<br></h5>';
                         $desc = "<h5 style='color: black'>Descrição: " . $values['descricao'] . '<br></h5>';
+                        $Profissao = "<h5 style='color: black'>Profissão: " . $values['profissao'] . '<br></h5>';
 
                     ?>
                         <div class="col-3 " style="padding: 20px;">
                             <div class="bg-white p-4">
                                 <?php echo $nome ?>
+                                <?php echo $Profissao?>
                                 <img class="img-fluid" src="./assets/img/unload.png">
                                 <?php echo $desc ?>
                                 <?php echo $id ?>

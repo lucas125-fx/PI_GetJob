@@ -1,3 +1,4 @@
+  <div class="container-fluid">
   <div class="container-fluid" style="background-color: gray" id="sobre">
       <div class="row">
           <div class="col"></div>
@@ -9,4 +10,5 @@
       <div class="row">
           <p style="color: black" ; class="mx-end">Contato: GetJobRH@gmail.com</p>
       </div>
+  </div>
   </div>

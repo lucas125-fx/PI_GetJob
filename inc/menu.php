@@ -55,9 +55,9 @@
 
 
 
-        <form class="d-flex" method="POST" action="inc/result.php">
+        <form class="d-flex" method="POST" action="result.php">
           <input class="form-control me-2" type="search" placeholder="Pesquisar anúncios" aria-label="Pesquisar">
-          <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+          <button class="btn btn-outline-success" name="pesquisar" type="submit">Pesquisar</button>
         </form>
       </div>
     </div>
