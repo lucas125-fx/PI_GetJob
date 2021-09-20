@@ -21,21 +21,30 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="cadfuncionario.php">Funcionário</a></li>
               <li><a class="dropdown-item" href="cadusuario.php">Usuário</a></li>
-              <li><a class="dropdown-item" href="cadanuncios.php">Anúncios</a></li>
-            </ul>
-          </li>
-          
-          <!-- Login com dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Login
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="loginfuncionario.php">Funcionário</a></li>
-              <li><a class="dropdown-item" href="login.php">Usuário</a></li>
+              <?php
+              if (!empty($_SESSION)) {
+
+              ?>
+
+                <li><a class="dropdown-item" href="cadanuncios.php">Anúncios</a></li>
+              <?php }
+              ?>
             </ul>
           </li>
 
+
+
+          <!-- Login com dropdown -->
+          <?php if (empty($_SESSION)) { ?>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Login
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="loginfuncionario.php">Funcionário</a></li>
+                <li><a class="dropdown-item" href="login.php">Usuário</a></li>
+              </ul>
+            </li><?php } ?>
           <!-- Serviço funcionário com dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,25 +52,29 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="loginfuncionario.php">Funcionário</a></li>
-              <li><a class="dropdown-item" href="login.php">Usuário</a></li>
             </ul>
           </li>
-
           <!-- Link simples do menu -->
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="logout.php">Sair</a>
-          </li>
+          <?php if (!empty($_SESSION)) { ?>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="logout.php">Sair</a>
+            </li>
+          <?php } ?>
         </ul>
-
-
-
-        <form class="d-flex" method="POST" action="result.php">
-          <input class="form-control me-2" type="search" placeholder="Pesquisar anúncios" aria-label="Pesquisar">
-          <button class="btn btn-outline-success" name="pesquisar" type="submit">Pesquisar</button>
-        </form>
+        <div>
+          <div style="text-align: center;">
+            <?php if (!empty($_SESSION)) {
+              echo "<div style='color:white'>Bem-vindo " . $_SESSION['nome'] . "</div> "; ?>
+          </div>
+          <?php } ?>
+          <div class="col">
+            <form class="d-flex" method="POST" action="result.php">
+              <input class="form-control me-2" type="search" placeholder="Pesquisar anúncios" aria-label="Pesquisar">
+              <button class="btn btn-outline-success" name="pesquisar" type="submit">Pesquisar</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
-
-
 </div>

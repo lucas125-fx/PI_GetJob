@@ -14,7 +14,7 @@ $dbname = "getjob";
 $teste = mysqli_connect($servidor, $usuario, $senha, $dbname);
 
 $pesquisar = $_POST['pesquisar'];
-$result_anun = "SELECT * FROM anuncios WHERE profissao LIKE '$pesquisar' ";
+$result_anun = "SELECT * FROM anuncios WHERE profissao LIKE '$pesquisar' "; // após o WHERE deve-se inserir o segundo elemento da tabela de
 $result_anuncios = mysqli_query($teste, $result_anun);
 
 echo "Você pesquisou: " . $pesquisar;
@@ -37,7 +37,7 @@ while ($rows_anun = mysqli_fetch_array($result_anuncios)) {
                     <div>Profissão <?php echo $rows_anun['profissao'] ?></div>
                     <div>Nome: <?php echo $rows_anun['nome'] ?></div>
                     <div>Descrição: <?php echo $rows_anun['descricao'] ?></div>
-                    <div class="text-center"><button><a style="color:black; font-family:'Courier'; text-decoration: none;background-color:green; border: 3px outset gray" role="button" href="../workperf.php?id=<?php echo $rows_anun['ID'] ?>">Contratar</a></button></div>
+                    <div class="text-center"><button><a style="color:black; font-family:'Courier'; text-decoration: none;background-color:green; border: 3px outset gray" role="button" href="workperf.php?id=<?php echo $rows_anun['ID'] ?>">Contratar</a></button></div>
                     <div> <?php echo $rows_anun['ID'] ?></div>
                 </div>
             </div>
